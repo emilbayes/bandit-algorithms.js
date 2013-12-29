@@ -1,0 +1,15 @@
+{
+  "name": "bandit-algorithms.js",
+  "version": "0.0.0",
+  "description": "Javascript implementation of O'Reilly's book \"Bandit Algorithms for Website Optimization\"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/tixz/bandit-algorithms.js.git"
+  },
+  "author": "Emil Bay <github@tixz.dk>",
+  "license": "MIT"
+}
