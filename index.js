@@ -1,14 +1,18 @@
-var EpsilonGreedy = require('./lib/algorithms').EpsilonGreedy;
+var EpsilonGreedy = require('./lib/algorithms').EpsilonGreedy,
+    BernoulliArm = require('./lib/arms').Bernoulli,
+    _shuffle = require('lodash.shuffle');
 
 var eg = new EpsilonGreedy(0.5);
 
-eg.initialize(5);
-for (var i = 1000, arm; i >= 0; i--) {
+var means = _shuffle([0.1, 0.1, 0.1, 0.1, 0.9]),
+    arms = means.map(function(mu) { return new BernoulliArm(mu) });
+
+eg.initialize(means.length);
+for (var i = 10000, arm; i >= 0; i--) {
     
     arm = eg.selectArm();
-    
-    //To test, the arms should be preforming in ascending order
-    eg.update(arm, Math.random()*2+(arm/5)|0);
+    eg.update(arm, arms[arm].draw());
 };
 
+console.log(means);
 console.log(eg);

@@ -7,9 +7,12 @@
   },
   "main": "index.js",
   "repository": {
-  	"type": "git",
-  	"url": "https://github.com/tixz/bandit-algorithms.js.git"
+    "type": "git",
+    "url": "https://github.com/tixz/bandit-algorithms.js.git"
   },
   "author": "Emil Bay <github@tixz.dk>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash.shuffle": "~2.4.1"
+  }
 }
